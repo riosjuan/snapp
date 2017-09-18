@@ -1,0 +1,50 @@
+@import 'colors';
+@import 'normalize';
+@import 'typography';
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont,
+  'avenir next', avenir,
+  'helvetica neue', helvetica,
+  ubuntu,
+  roboto, noto,
+  'segoe ui', arial,
+  sans-serif;
+}
+
+
+.main-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 2.5rem;
+  max-width: 64rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header {
+  height: 100vh;
+  background: url('/images/snapp-background-2.jpg') no-repeat center;
+  background-size: cover;
+
+}
+
+.title {
+  color: $main-text;
+  font-size: 6rem;
+  letter-spacing: -1.5px;
+  margin: 0 0 2rem;
+
+  @media screen and (max-width: 30em){
+    font-size: 3rem;
+  }
+}
+
+
+.paragraph {
+  color: lighten($main-text, 30%);
+  max-width: 30em;
+  // letter-spacing: .75px;
+  margin: 0;
+}
