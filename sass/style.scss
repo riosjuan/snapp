@@ -25,7 +25,7 @@ body {
 
 header {
   height: 100vh;
-  background: url('/images/snapp-background-2.jpg') no-repeat center;
+  background: url(/images/snapp-background-2.jpg) no-repeat center;
   background-size: cover;
 
 }
@@ -41,10 +41,29 @@ header {
   }
 }
 
-
 .paragraph {
   color: lighten($main-text, 30%);
   max-width: 30em;
   // letter-spacing: .75px;
   margin: 0;
+}
+
+.store-bages {
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.ios {
+  margin-right: 1rem;
+
+  img {
+    height: 2.725rem;
+  }
+}
+
+.android {
+  img {
+    height: 4rem;
+  }
 }
