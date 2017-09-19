@@ -510,20 +510,14 @@ header {
   padding: 2rem 0;
 }
 
-@media screen and (max-width: 30em) {
-  .store-bages {
-    padding: 0;
-  }
-}
-
 .ios {
   margin-right: 1rem;
 }
 
 .ios img {
-  height: 2.725rem;
+  height: 2.75rem;
 }
 
 .android img {
-  height: 4rem;
+  height: 2.75rem;
 }
