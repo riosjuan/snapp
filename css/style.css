@@ -445,20 +445,42 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'avenir next', avenir, 'helvetica neue', helvetica, ubuntu, roboto, noto, 'segoe ui', arial, sans-serif;
 }
 
-.main-container {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  padding: 0 2.5rem;
-  max-width: 64rem;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 header {
   height: 100vh;
-  background: url("../images/snapp-background-2.jpg") no-repeat center;
-  background-size: cover;
+  background: url("../images/snapp-image.png") no-repeat right bottom, linear-gradient(#f4fbfd, #d7f6ff);
+  background-size: contain;
+}
+
+@media screen and (max-width: 30em) {
+  header {
+    background-position: right top;
+  }
+}
+
+.main-container {
+  max-width: 64rem;
+  height: 100vh;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 2.5rem;
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 30em) {
+  .main-container {
+    align-items: flex-end;
+  }
+}
+
+.snapp-text {
+  width: 50%;
+}
+
+@media screen and (max-width: 30em) {
+  .snapp-text {
+    width: 100%;
+  }
 }
 
 .title {
@@ -471,6 +493,7 @@ header {
 @media screen and (max-width: 30em) {
   .title {
     font-size: 3rem;
+    margin-bottom: 1rem;
   }
 }
 
