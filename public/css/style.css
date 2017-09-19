@@ -506,7 +506,14 @@ header {
 .store-bages {
   display: flex;
   align-items: center;
+  flex-direction: row;
   padding: 2rem 0;
+}
+
+@media screen and (max-width: 30em) {
+  .store-bages {
+    padding: 0;
+  }
 }
 
 .ios {
