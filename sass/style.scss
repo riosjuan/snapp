@@ -45,7 +45,7 @@ header {
 }
 
 .title {
-  color: $main-text;
+  color: $gray;
   font-size: 6rem;
   letter-spacing: -1.5px;
   margin: 0 0 2rem;
@@ -57,7 +57,8 @@ header {
 }
 
 .paragraph {
-  color: lighten($main-text, 30%);
+  color: $main-text;
+  font-weight: 200;
   max-width: 30em;
   margin: 0;
 }
