@@ -45,7 +45,7 @@ header {
 }
 
 .title {
-  color: #ECB5BD;
+  color: $main-text;
   font-size: 6rem;
   letter-spacing: -1.5px;
   margin: 0 0 2rem;
@@ -75,11 +75,19 @@ header {
 
   img {
     height: 2.75rem;
+
+    @media screen and (max-width: 20em) {
+      height: 2rem;
+    } 
   }
 }
 
 .android {
   img {
     height: 2.75rem;
+
+    @media screen and (max-width: 20em) {
+      height: 2rem;
+    }      
   }
 }

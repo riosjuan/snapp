@@ -1,12 +1,17 @@
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var imagemin = require('gulp-imagemin');
-var del = require('del');
-var browserSync = require('browser-sync').create();
+const gulp = require('gulp');
+const sass = require('gulp-sass');
+const autoprefixer = require('gulp-autoprefixer');
+const imagemin = require('gulp-imagemin');
+const del = require('del');
+const browserSync = require('browser-sync').create();
 
 gulp.task('sass', function(){
   return gulp.src('sass/**/*.scss')
-    .pipe(sass({outputStyle: 'expanded',includePaths: ['node_modules']}).on('error', sass.logError)) // Using gulp-sass
+  .pipe(autoprefixer({
+    browsers: ['last 2 versions'],
+    cascade: false
+  }))
+    .pipe(sass({outputStyle: 'compressed',includePaths: ['node_modules']}).on('error', sass.logError)) // Using gulp-sass
     .pipe(gulp.dest('public/css'))
     .pipe(browserSync.reload({
       stream: true
