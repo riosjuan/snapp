@@ -447,7 +447,7 @@ body {
 
 header {
   height: 100vh;
-  background: url("../images/snapp-image.png") no-repeat right bottom, linear-gradient(#f4fbfd, #d7f6ff);
+  background: url("../images/snapp-image.png") no-repeat right bottom, linear-gradient(rgba(236, 181, 189, 0.5), rgba(191, 223, 212, 0.5));
   background-size: contain;
 }
 
@@ -484,7 +484,7 @@ header {
 }
 
 .title {
-  color: #4B4B4B;
+  color: #ECB5BD;
   font-size: 6rem;
   letter-spacing: -1.5px;
   margin: 0 0 2rem;
@@ -498,8 +498,8 @@ header {
 }
 
 .paragraph {
-  color: #333333;
-  font-weight: 200;
+  color: #666666;
+  font-weight: 300;
   max-width: 30em;
   margin: 0;
 }
@@ -508,7 +508,7 @@ header {
   display: flex;
   align-items: center;
   flex-direction: row;
-  padding: 2rem 0;
+  padding: 3rem 0;
 }
 
 .ios {
