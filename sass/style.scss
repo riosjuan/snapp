@@ -1,25 +1,30 @@
 @import 'colors';
+@import 'fonts';
 @import 'normalize';
 @import 'typography';
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont,
-  'avenir next', avenir,
-  'helvetica neue', helvetica,
-  ubuntu,
-  roboto, noto,
-  'segoe ui', arial,
-  sans-serif;
+  font-family: $snapp-font;
+  background: linear-gradient(rgba(236, 181, 189, 0.5), rgba(191, 223, 212, 0.5));
 }
 
 header {
   height: 100vh;
-  background:  url('../images/snapp-image.png') no-repeat right bottom, 
-  linear-gradient(rgba(236, 181, 189, 0.5), rgba(191, 223, 212, 0.5));
-  background-size: contain;
+  position: relative;
+}
+
+.hand {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background:  url('../images/snapp-image-3.png') no-repeat right bottom;
+  background-size: cover;
+  top: 0;
+  z-index: -100;
 
   @media screen and (max-width: 60em) {
-    background-position: right top;
+    background-size: 90%;
+    background-position: right 30%;
   }
 }
 
@@ -30,7 +35,7 @@ header {
   margin-right: auto;
   padding: 0 2.5rem;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
 
   @media screen and (max-width: 60em) {
     align-items: flex-end;
