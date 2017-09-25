@@ -3,16 +3,33 @@
 @import 'normalize';
 @import 'typography';
 
-body {
+html, body {
+  height: 100%; min-height: 100%;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+.full-screen { height: 100%; min-height: 100%; }
+
+.background {
+  position: relative;
   font-family: $snapp-font;
   background: linear-gradient(rgba(236, 181, 189, 0.5), rgba(191, 223, 212, 0.5));
   overflow: hidden;
+  
 }
 
-header {
-  height: 100vh;
-  position: relative;
-  padding: 0 2.5rem;
+.container {
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  padding: 2rem;
+
+  @media screen and (min-width: 30em) and (max-width: 60em) {
+    padding: 3rem;
+  }
 }
 
 .hand {
@@ -20,8 +37,9 @@ header {
   height: 100%;
   position: absolute;
   background:  url('../images/snapp-image-4.png') no-repeat right bottom;
-  background-size: contain;
+  background-size: 60%;
   top: 0;
+  left: 0;
   z-index: -100;
 
   @media screen and (min-width: 30em) and (max-width: 60em) {
@@ -35,66 +53,56 @@ header {
   }
 }
 
-.main-container {
-  max-width: 64rem;
-  height: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  align-items: flex-end;
-}
-
 .snapp-text {
   width: 50%;
-  margin-bottom: 5rem;
 
   @media screen and (max-width: 30em)  {
     width: 100%;
-    margin-bottom: 2.5rem;
   }
 }
 
 .title {
   color: $main-text;
-  font-size: 6rem;
-  letter-spacing: -1.5px;
-  margin: 0 0 2rem;
+  font-size: 3rem;
+  letter-spacing: -1px;
+  margin: 0 0 1rem;
 
   @media screen and (min-width: 30em) and (max-width: 60em) {
     font-size: 4rem;
-    letter-spacing: -1px;
+    letter-spacing: -1.5px;
     margin: 0 0 2rem;
   }
 
-  @media screen and (max-width: 60em){
-    font-size: 2.25rem;
-    letter-spacing: -1px;
-    margin-bottom: 1rem;
+  @media screen and (min-width: 60em){
+    font-size: 6rem;
+    letter-spacing: -1.5px;
+    margin: 0 0 2rem;
   }
 }
 
 .paragraph {
-  color: lighten($main-text, 20%);
-  font-weight: 300;
+  color: lighten($main-text, 10%);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
   max-width: 30em;
   margin: 0;
 
-  @media screen and (max-width: 60em){
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-
+  @media screen and (min-width: 60em){
+    font-size: 1.5rem;
+    margin: 0;
   }
 }
 
 .store-bages {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: row;
-  margin-top: 3rem;
+  margin-top: 2rem;
 
-  @media screen and (max-width: 60em){
-    margin-top: 2rem;
+  @media screen and (min-width: 30em) {
+    flex-direction: row;
+    margin-top: 3rem;
   }
 }
 
@@ -102,20 +110,14 @@ header {
   margin-right: 1rem;
 
   img {
-    height: 2.75rem;
-
-    @media screen and (max-width: 22em) {
-      height: 2rem;
-    } 
+    width: 100%;
   }
 }
 
 .android {
-  img {
-    height: 2.75rem;
 
-    @media screen and (max-width: 22em) {
-      height: 2rem;
-    }      
+  img {
+    width: 100%;
+    max-width: 135px;
   }
 }
