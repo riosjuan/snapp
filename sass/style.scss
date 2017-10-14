@@ -18,17 +18,16 @@ div {
   // overflow: hidden;
   padding: 2rem;
   display: flex;
-  // align-items: flex-end;
+  align-items: flex-end;
+  @media screen and (max-width: 60em) {
+    height: auto;
+  }
+  
 }
 
 .hand {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  background:  url('../images/snapp-image-4.png') no-repeat right bottom;
-  background-size: 60%;
-  top: 0;
-  left: 0;
+  width: 50%;
+  height: auto;
   z-index: 1;
 
   @media screen and (min-width: 30em) and (max-width: 60em) {
@@ -51,7 +50,7 @@ div {
 }
 
 .content {
-  padding-bottom: 4rem;
+  width: 50%;
   z-index: 10;
 }
 
