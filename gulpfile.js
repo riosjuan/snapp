@@ -27,6 +27,7 @@ gulp.task('serve', function() {
       baseDir: 'public'
     },
   })
+  gulp.watch('sass/**/*.scss', ['sass']); 
 });
 
 gulp.task('images', function(){

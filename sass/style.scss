@@ -3,33 +3,22 @@
 @import 'normalize';
 @import 'typography';
 
-html, body {
-  height: 100%; min-height: 100%;
+body {
+  font-family: $snapp-font;
 }
 
 div {
   box-sizing: border-box;
 }
 
-.full-screen { height: 100%; min-height: 100%; }
-
 .background {
+  height: 100vh;
   position: relative;
-  font-family: $snapp-font;
   background: linear-gradient(rgba(236, 181, 189, 0.5), rgba(191, 223, 212, 0.5));
-  overflow: hidden;
-  
-}
-
-.container {
-  height: 100%;
-  display: flex;
-  align-items: flex-end;
+  // overflow: hidden;
   padding: 2rem;
-
-  @media screen and (min-width: 30em) and (max-width: 60em) {
-    padding: 3rem;
-  }
+  display: flex;
+  // align-items: flex-end;
 }
 
 .hand {
@@ -40,7 +29,7 @@ div {
   background-size: 60%;
   top: 0;
   left: 0;
-  z-index: -100;
+  z-index: 1;
 
   @media screen and (min-width: 30em) and (max-width: 60em) {
     background-size: contain;
@@ -59,6 +48,11 @@ div {
   @media screen and (max-width: 30em)  {
     width: 100%;
   }
+}
+
+.content {
+  padding-bottom: 4rem;
+  z-index: 10;
 }
 
 .title {
@@ -83,10 +77,11 @@ div {
 .paragraph {
   color: lighten($main-text, 10%);
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 700;
   line-height: 1.5;
-  max-width: 30em;
+  max-width: 24em;
   margin: 0;
+  letter-spacing: -0.5px;
 
   @media screen and (min-width: 60em){
     font-size: 1.5rem;
