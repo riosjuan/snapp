@@ -2,7 +2,6 @@ const gulp = require('gulp');
 const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
 const imagemin = require('gulp-imagemin');
-const del = require('del');
 const browserSync = require('browser-sync').create();
 
 gulp.task('sass', function(){
@@ -22,7 +21,7 @@ gulp.task('watch',['browserSync', 'sass'], function(){
   gulp.watch('sass/**/*.scss', ['sass']); 
 });
 
-gulp.task('browserSync', function() {
+gulp.task('serve', function() {
   browserSync.init({
     server: {
       baseDir: 'public'
@@ -34,10 +33,6 @@ gulp.task('images', function(){
   return gulp.src('images/**/*.+(png|jpg|gif|svg)')
   .pipe(imagemin())
   .pipe(gulp.dest('public/images'))
-});
-
-gulp.task('clean:public', function() {
-  return del.sync('public');
 });
 
 gulp.task('build', [`sass`, `images`], function (){
