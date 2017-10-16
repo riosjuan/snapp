@@ -11,47 +11,46 @@ div {
   box-sizing: border-box;
 }
 
-.background {
-  height: 100vh;
-  position: relative;
-  background: linear-gradient(rgba(236, 181, 189, 0.5), rgba(191, 223, 212, 0.5));
-  // overflow: hidden;
-  padding: 2rem;
+.container {
+  height: 100%;
+  background: linear-gradient(#F5D9DE, #FFFFFF);
   display: flex;
-  align-items: flex-end;
-  @media screen and (max-width: 60em) {
-    height: auto;
+  flex-flow: column-reverse;
+  
+  @media screen and (min-width: 60em) {
+    height: 100vh;
+    align-items: flex-end;
+    flex-flow: row;
   }
   
 }
 
 .hand {
-  width: 50%;
+  width: 100%;
   height: auto;
+  padding: 4rem 0 0 2rem;
   z-index: 1;
 
-  @media screen and (min-width: 30em) and (max-width: 60em) {
-    background-size: contain;
-    background-position: center;
+  @media screen and (min-width: 60em) {
+    width: 60%;
+    padding: 0;
   }
 
-  @media screen and (max-width: 60em) {
-    background-size: 90%;
-    background-position: right 30%;
-  }
-}
-
-.snapp-text {
-  width: 50%;
-
-  @media screen and (max-width: 30em)  {
-    width: 100%;
+  img {
+    max-width: 100%;
   }
 }
 
 .content {
-  width: 50%;
+  width: 100%;
+  padding: 0 2rem 2rem;
   z-index: 10;
+
+  @media screen and (min-width: 60em) {
+    width: 40%;
+    padding: 2rem;
+  }
+
 }
 
 .title {
@@ -60,14 +59,8 @@ div {
   letter-spacing: -1px;
   margin: 0 0 1rem;
 
-  @media screen and (min-width: 30em) and (max-width: 60em) {
-    font-size: 4rem;
-    letter-spacing: -1.5px;
-    margin: 0 0 2rem;
-  }
-
   @media screen and (min-width: 60em){
-    font-size: 6rem;
+    font-size: 4rem;
     letter-spacing: -1.5px;
     margin: 0 0 2rem;
   }
@@ -75,10 +68,10 @@ div {
 
 .paragraph {
   color: lighten($main-text, 10%);
-  font-size: 1rem;
-  font-weight: 700;
+  font-size: 1.25rem;
+  font-weight: 600;
   line-height: 1.5;
-  max-width: 24em;
+  max-width: 32em;
   margin: 0;
   letter-spacing: -0.5px;
 
