@@ -1,129 +1,126 @@
-@import 'colors';
-@import 'fonts';
-@import 'normalize';
-@import 'typography';
+@import "colors";
+@import "fonts";
+@import "normalize";
+@import "typography";
 
 body {
-  font-family: $snapp-font;
+	font-family: $snapp-font;
 }
 
 div {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 .container {
-  height: 100%;
-  background: linear-gradient(#F5D9DE, #FFFFFF);
-  display: flex;
-  flex-flow: column-reverse;
-  
-  @media screen and (min-width: 60em) {
-    height: 100vh;
-    align-items: flex-end;
-    flex-flow: row;
-  }
-  
+	height: 100%;
+	background: linear-gradient(#f5d9de, #ffffff);
+	display: flex;
+	flex-flow: column-reverse;
+
+	@media screen and (min-width: 60em) {
+		height: 100vh;
+		align-items: flex-end;
+		flex-flow: row;
+	}
 }
 
 .hand {
-  width: 100%;
-  height: auto;
-  padding: 4rem 0 0 2rem;
-  z-index: 1;
+	width: 100%;
+	height: auto;
+	padding: 4rem 0 0 2rem;
+	z-index: 1;
 
-  @media screen and (min-width: 60em) {
-    width: 60%;
-    padding: 0;
-  }
+	@media screen and (min-width: 60em) {
+		width: 60%;
+		padding: 0;
+	}
 
-  img {
-    max-width: 100%;
-  }
+	img {
+		max-width: 100%;
+	}
 }
 
 .content {
-  width: 100%;
-  padding: 0 2rem 2rem;
-  z-index: 10;
+	width: 100%;
+	padding: 0 2rem 2rem;
+	z-index: 10;
 
-  @media screen and (min-width: 60em) {
-    width: 40%;
-    padding: 2rem;
-  }
-
+	@media screen and (min-width: 60em) {
+		width: 40%;
+		padding: 2rem;
+	}
 }
 
 .title {
-  color: $main-text;
-  font-size: 3rem;
-  letter-spacing: -1px;
-  margin: 0 0 1rem;
+	color: $main-text;
+	font-size: 3rem;
+	letter-spacing: -1px;
+	margin: 0 0 1rem;
 
-  @media screen and (min-width: 60em){
-    font-size: 4rem;
-    letter-spacing: -1.5px;
-    margin: 0 0 2rem;
-  }
+	@media screen and (min-width: 60em) {
+		font-size: 4rem;
+		letter-spacing: -1.5px;
+		margin: 0 0 2rem;
+	}
 }
 
 .paragraph {
-  color: lighten($main-text, 10%);
-  font-size: 1.25rem;
-  font-weight: 600;
-  line-height: 1.5;
-  max-width: 32em;
-  margin: 0;
-  letter-spacing: -0.5px;
+	color: lighten($main-text, 10%);
+	font-size: 1.25rem;
+	font-weight: 600;
+	line-height: 1.5;
+	max-width: 32em;
+	margin: 0;
+	letter-spacing: -0.5px;
 
-  @media screen and (min-width: 60em){
-    font-size: 1.5rem;
-    margin: 0;
-  }
+	@media screen and (min-width: 60em) {
+		font-size: 1.5rem;
+		margin: 0;
+	}
 }
 
 .help-text {
-  color: lighten($main-text, 10%);
-  font-size: .85rem;
-  font-weight: 400;
-  line-height: 1.5;
-  margin-top: 2rem;
+	color: lighten($main-text, 10%);
+	font-size: 0.85rem;
+	font-weight: 400;
+	line-height: 1.5;
+	margin-top: 2rem;
 }
 
 .help-button {
-  color: lighten($main-text, 10%);
-  font-weight: 600;
-  text-decoration: none;
-  box-shadow: inset 0 -0.35em 0 0 #32DAE9, 0 0.1em 0 0 #32DAE9;
-  transition: box-shadow .25s ease-in-out;
+	color: lighten($main-text, 10%);
+	font-weight: 600;
+	text-decoration: none;
+	box-shadow: inset 0 -0.35em 0 0 #32dae9, 0 0.1em 0 0 #32dae9;
+	transition: box-shadow 0.25s ease-in-out;
 
-  &:hover {
-    box-shadow: inset 0 -1.2em 0 0 #32DAE9, 0 0.1em 0 0 #32DAE9;
-  }
+	&:hover {
+		box-shadow: inset 0 -1.2em 0 0 #32dae9, 0 0.1em 0 0 #32dae9;
+	}
 }
 .store-bages {
-  display: flex;
-  align-items: flex-start;
-  flex-direction: row;
-  margin-top: 2rem;
+	display: flex;
+	align-items: flex-start;
+	flex-direction: row;
+	margin-top: 2rem;
 
-  @media screen and (min-width: 30em) {
-    flex-direction: row;
-    margin-top: 3rem;
-  }
+	@media screen and (min-width: 30em) {
+		flex-direction: row;
+		margin-top: 3rem;
+	}
 }
 
 .ios {
-  margin-right: 1rem;
+	margin-right: 1rem;
 
-  img {
-    width: 100%;
-  }
+	img {
+		width: 100%;
+	}
 }
 
 .android {
-
-  img {
-    width: 100%;
-    max-width: 135px;
-  }
+	img {
+		width: 100%;
+		max-width: 135px;
+	}
 }
